@@ -1,4 +1,5 @@
 from tkinter import *
+
 from tkinter import Toplevel, messagebox
 import time
 import mysql.connector
@@ -302,9 +303,12 @@ def show_balance():
 def connect_database():
     def connect_server_btm():
         global cur, conn
-        host = host_val.get()
-        user = user_val.get()
-        password = password_val.get()
+        # host = host_val.get()
+        # user = user_val.get()
+        # password = password_val.get()
+        host = "localhost"
+        user = "root"
+        password = "123@Never#settle"
         try:
             conn = mysql.connector.connect(
                 host=host,
